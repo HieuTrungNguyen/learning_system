@@ -13,6 +13,20 @@ en:
       home: "Home"
       help: "Help"
       log_in: "Log in"
+      users: "Users"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
+
+  sessions:
+    new:
+      log_in: "Log in"
+      remember_me: "Remember me on this computer"
+      new_user: "New user"
+      sign_up: "Sign up now!"
+    create:
+      invalid: "Invalid email/password combination"
 
   shared:
     error_messages:
@@ -23,3 +37,12 @@ en:
     home:
       welcome: "Welcome to the E-learning System"
       signup_now: "Sign up now!"
+
+  users:
+    new:
+      sign_up: "Sign up"
+      create_account: "Create new account"
+    create:
+      welcome: "Welcome you to the E-learning System."
+    form:
+      confirm: "Confirmation"
