@@ -133,3 +133,34 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+.search-form {
+  width: 90%;
+  float: right;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 40px;
+
+  .search-field {
+    float: left;
+    width: 500px;
+    margin-left: 180px;
+  }
+
+  .search-btn {
+    float: left;
+  }
+}
+tr, td, th {
+  text-align: center;
+}
+
+tr.user-row .user-image {
+  width: 5%;
+  transform: translateY(0px);
+}
+
+tr.user-row td {
+  transform: translateY(15px);
+}
+

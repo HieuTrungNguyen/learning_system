@@ -20,6 +20,10 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: {minimum: 6, maximum: 255}, allow_nil: true
 
+  scope :all_users, -> search {where QUERY_BY_NAME, search: "%#{search}%"}
+
+  QUERY_BY_NAME = "name like :search"
+
   def remember
     self.remember_token = User.new_token
     update_attributes remember_digest: User.digest(remember_token)
@@ -43,6 +47,10 @@ class User < ApplicationRecord
 
     def new_token
       SecureRandom.urlsafe_base64
+    end
+
+    def find_all_users
+      User.where(is_admin: false).order created_at: :ASC
     end
   end
 

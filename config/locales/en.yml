@@ -46,3 +46,10 @@ en:
       welcome: "Welcome you to the E-learning System."
     form:
       confirm: "Confirmation"
+    index:
+      all_users: "All Users"
+      search: "Search"
+      number: "Number"
+      avatar: "Avatar"
+      name: "Name"
+      email: "Email"
