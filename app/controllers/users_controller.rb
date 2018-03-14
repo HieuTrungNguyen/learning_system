@@ -13,6 +13,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    params[:search] ||= ""
+    @users = User.find_all_users
+      .all_users(params[:search])
+      .paginate page: params[:page], per_page: Settings.user.per_page
+  end
+
   def show
     render_404 unless @user
   end
