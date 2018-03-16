@@ -53,3 +53,12 @@ en:
       avatar: "Avatar"
       name: "Name"
       email: "Email"
+
+  admin:
+    categories:
+      new:
+        new_cate: "New Category"
+        create_cate: "Create Category"
+      create:
+        created: "Create category successfully"
+        not_created: "The category is not created"
