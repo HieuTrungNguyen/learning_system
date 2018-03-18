@@ -6,12 +6,12 @@ en:
       title: "E-learning System"
     footer:
       made_by: "The project made by"
+      help: "Help"
       about: "About"
       contact: "Contact"
     header:
       app_name: "Learning System"
       home: "Home"
-      help: "Help"
       log_in: "Log in"
       users: "Users"
       account: "Account"
@@ -62,3 +62,11 @@ en:
       create:
         created: "Create category successfully"
         not_created: "The category is not created"
+      index:
+        all_categories: "All Categories"
+        search: "Search"
+        number: "Number"
+        name: "Name"
+        description: "Description"
+        words_total: "Words Total"
+        action: "Action"
