@@ -20,9 +20,9 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: {minimum: 6, maximum: 255}, allow_nil: true
 
-  scope :all_users, -> search {where QUERY_BY_NAME, search: "%#{search}%"}
+  scope :all_users, -> search {where QUERY_BY_NAME_OR_EMAIL, search: "%#{search}%"}
 
-  QUERY_BY_NAME = "name like :search"
+  QUERY_BY_NAME_OR_EMAIL = "name like :search or email like :search"
 
   def remember
     self.remember_token = User.new_token

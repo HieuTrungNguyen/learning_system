@@ -14,6 +14,12 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
+  def index
+    params[:search] ||= ""
+    @categories = Category.all_categories(params[:search])
+      .paginate page: params[:page], per_page: Settings.category.per_page
+  end
+
   def show
   end
 

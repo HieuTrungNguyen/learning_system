@@ -1,3 +1,5 @@
+image: "user.png"
 user:
   per_page: 10
-image: "user.png"
+category:
+  per_page: 15
