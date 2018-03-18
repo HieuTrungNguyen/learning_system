@@ -1,6 +1,35 @@
 en:
   hello: "Hello world"
 
+  admin:
+    categories:
+      new:
+        new_cate: "New Category"
+        create_cate: "Create Category"
+      create:
+        created: "Create category successfully"
+        not_created: "The category is not created"
+      index:
+        all_categories: "All Categories"
+        search: "Search"
+        number: "Number"
+        name: "Name"
+        description: "Description"
+        words_total: "Words Total"
+        action: "Action"
+
+  categories:
+    category:
+      start: "Start"
+    index:
+      all_categories: "All Categories"
+      search: "Search"
+      number: "Number"
+      name: "Name"
+      description: "Description"
+      words_total: "Words Total"
+      action: "Action"
+
   layouts:
     application:
       title: "E-learning System"
@@ -18,6 +47,7 @@ en:
       profile: "Profile"
       settings: "Settings"
       log_out: "Log out"
+      categories: "Categories"
 
   sessions:
     new:
@@ -53,20 +83,3 @@ en:
       avatar: "Avatar"
       name: "Name"
       email: "Email"
-
-  admin:
-    categories:
-      new:
-        new_cate: "New Category"
-        create_cate: "Create Category"
-      create:
-        created: "Create category successfully"
-        not_created: "The category is not created"
-      index:
-        all_categories: "All Categories"
-        search: "Search"
-        number: "Number"
-        name: "Name"
-        description: "Description"
-        words_total: "Words Total"
-        action: "Action"
