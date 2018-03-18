@@ -1,0 +1,38 @@
+<% provide :title, t(".all_categories") %>
+
+<h1><%= t ".all_categories" %></h1>
+<div class="row">
+  <div class="search-form">
+    <%= form_tag categories_path, method: :get, id: "search-form" do %>
+      <div class="input-group">
+        <%= text_field_tag :search, params[:search], placeholder: t(".search"),
+          class: "form-control search-field" %>
+        <div class="input-group-btn search-btn">
+          <%= button_tag type: "submit", class: "btn btn-primary" do %>
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <span class="label-icon"><%= t ".search" %></span>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="panel-body">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="table table-hover table-bordered table-responsive th-word">
+        <thead class="th-word">
+          <th class="th-index"><%= t ".number" %></th>
+          <th class="th-category"><%= t ".name" %></th>
+          <th class="th-category"><%= t ".description" %></th>
+          <th class="th-category"><%= t ".words_total" %></th>
+          <th class="th-category"><%= t ".action" %></th>
+        </thead>
+        <tbody>
+          <%= render @categories %>
+        </tbody>
+      </table>
+      <%= will_paginate @categories %>
+    </div>
+  </div>
+</div>
