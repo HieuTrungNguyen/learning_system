@@ -4,5 +4,43 @@
   <td class="col-md-2"><%= link_to category.name, [:admin, category] %></td>
   <td class="col-md-4"><%= category.description %></td>
   <td class="col-md-2"><%= category.words.size %></td>
-  <td class="col-md-3"></td>
+  <td class="col-md-3">
+    <button type="button" class="btn btn-success btn-edit-category"
+     id="<%= category.id %>"><%= t ".edit" %></button>
+    <%= link_to t(".delete"), [:admin, category], method: :delete,
+     data: {confirm: t(".sure?")}, class: "btn btn-danger" %>
+  </td>
 </tr>
+
+<%= form_tag admin_category_path(category), method: :put, id: "edit-category-form" do %>
+  <div id="category-modal-<%= category.id %>" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3><%= t ".edit_category" %></h3>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <%= hidden_field_tag "id", category.id %>
+            <div>
+              <label><%= t ".name" %></label>
+              <%= text_field_tag :name, params[:name], value: category.name,
+                class: "form-control" %>
+            </div>
+            <div>
+              <label><%= t ".description" %></label>
+              <%= text_area_tag :description, params[:description],
+                value: category.description, class: "form-control" %>
+            </div>
+            <%= submit_tag t(".update"), class: "btn btn-success" %>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger" data-dismiss="modal">
+            <%= t ".cancel" %>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

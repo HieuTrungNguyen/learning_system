@@ -13,6 +13,10 @@ body {
   padding-top: 60px;
 }
 
+header, .container, footer {
+  clear: both;
+}
+
 section {
   overflow: auto;
 }

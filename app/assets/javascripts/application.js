@@ -15,3 +15,7 @@
 //= require jquery
 //= require bootstrap
 //= require_tree .
+
+$(document).on('turbolinks:load', function () {
+  category.initialize();
+});
