@@ -17,6 +17,26 @@ en:
         description: "Description"
         words_total: "Words Total"
         action: "Action"
+        add_category: "Add Category"
+        name: "Name"
+        description: "Description"
+        add: "Add"
+        cancel: "Cancel"
+      update:
+        updated: "%{name}'s category is updated"
+        not_updated: "No updated for %{name}'s category"
+      destroy:
+        deleted: "%{name}'s category deleted"
+        not_deleted: "%{name}'s category isn't deleted"
+      category:
+        edit: "Edit"
+        dele: "Delete"
+        sure?: "You sure?"
+        edit_category: "Edit Category"
+        name: "Name"
+        description: "Description"
+        update: "Update"
+        cancel: "Cancel"
 
   categories:
     category:

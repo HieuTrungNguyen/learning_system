@@ -13,7 +13,6 @@ gem "font-awesome-rails", "~> 4.7"
 gem "faker"
 gem "will_paginate", "~> 3.1.0"
 gem "bootstrap-will_paginate", "~> 0.0.10"
-gem "sqlite3"
 gem "puma", "~> 3.7"
 gem "sass-rails", "~> 5.0"
 gem "config"
@@ -24,6 +23,7 @@ gem "jbuilder", "~> 2.5"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "sqlite3", "~>1.3.13"
   gem "capybara", "~> 2.13"
   gem "selenium-webdriver"
 end

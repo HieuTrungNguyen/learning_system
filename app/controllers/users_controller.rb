@@ -31,5 +31,6 @@ class UsersController < ApplicationController
 
   def load_user
     @user = User.find_by id: params[:id]
+    render_404 unless @user
   end
 end
