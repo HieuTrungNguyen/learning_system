@@ -1,5 +1,6 @@
 en:
   hello: "Hello world"
+  word_imported: "Word imported!"
 
   admin:
     categories:

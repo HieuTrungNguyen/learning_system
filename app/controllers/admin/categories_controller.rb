@@ -28,7 +28,7 @@ class Admin::CategoriesController < ApplicationController
     if @category.update_attributes category_params
       flash[:success] = t ".updated", name: @category.name
     else
-      flash[:danger] = t ".not_updated", name: @category.name
+      flash[:info] = t ".not_updated", name: @category.name
     end
     redirect_to admin_categories_path
   end
