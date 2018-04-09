@@ -6,4 +6,16 @@ class ApplicationController < ActionController::Base
   def render_404
     render file: "#{Rails.root}/public/404.html", layout: false, status: 404
   end
+
+  private
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = t "must_login"
+      redirect_to login_url
+    end
+  end
+
+  def verify_admin
+    redirect_to root_url unless current_user.is_admin?
+  end
 end

@@ -1,0 +1,16 @@
+<tr class="user-row">
+  <td class="col-md-1">
+    <%= index_for user_counter, @users.current_page,
+    Settings.user.per_page %>
+  </td>
+  <td class="col-md-2 user-image">
+    <%= image_tag user.avatar? ? user.avatar : Settings.image, class: "img-responsive" %>
+  </td>
+  <td class="col-md-2"><%= link_to user.name, user %></td>
+  <td class="col-md-4"><%= user.email %></td>
+  <td class="col-md-3">
+    <%= link_to "", class: "btn btn-danger btn-sm" do %>
+      <span class="glyphicon glyphicon-remove"></span> <%= t ".delete" %>
+    <% end %>
+  </td>
+</tr>

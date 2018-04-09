@@ -20,7 +20,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: {minimum: 6, maximum: 255}, allow_nil: true
 
-  scope :all_users, -> search {where QUERY_BY_NAME_OR_EMAIL, search: "%#{search}%"}
+  scope :search_user, -> search {where QUERY_BY_NAME_OR_EMAIL, search: "%#{search}%"}
 
   QUERY_BY_NAME_OR_EMAIL = "name like :search or email like :search"
 
@@ -50,7 +50,7 @@ class User < ApplicationRecord
     end
 
     def find_all_users
-      User.where(is_admin: false).order created_at: :ASC
+      User.select(:id, :email, :name, :avatar).where(is_admin: false).order created_at: :ASC
     end
   end
 
