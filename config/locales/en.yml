@@ -1,6 +1,7 @@
 en:
   hello: "Hello world"
   word_imported: "Word imported!"
+  must_login: "You aren't log in."
 
   admin:
     categories:
@@ -38,6 +39,17 @@ en:
         description: "Description"
         update: "Update"
         cancel: "Cancel"
+    users:
+      user:
+        delete: "Delete"
+      index:
+        all_users: "All Users"
+        search: "Search"
+        number: "Number"
+        avatar: "Avatar"
+        name: "Name"
+        email: "Email"
+        action: "Action"
 
   categories:
     category:
