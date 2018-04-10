@@ -1,0 +1,12 @@
+<li><%= f.label f.object.word.content %></li>
+<% f.object.word.answers.each_with_index do |answer, index| %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= create_answer_index index %>
+      <%= answer.content %>
+    </div>
+    <div class="col-md-4">
+      <%= f.radio_button :answer_id, answer.id %>
+    </div>
+  </div>
+<% end %>
