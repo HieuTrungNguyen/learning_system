@@ -2,6 +2,7 @@ en:
   hello: "Hello world"
   word_imported: "Word imported!"
   must_login: "You aren't log in."
+  not_enough_word: "Not enough word to create lesson"
 
   admin:
     categories:
@@ -81,6 +82,15 @@ en:
       settings: "Settings"
       log_out: "Log out"
       categories: "Categories"
+
+  lessons:
+    create:
+      create_success: "Create lesson successfully!"
+    edit:
+      lesson_number: "Lesson: %{id}"
+      category: "Category"
+      datetime: "Datetime"
+      finish: "Finish"
 
   sessions:
     new:

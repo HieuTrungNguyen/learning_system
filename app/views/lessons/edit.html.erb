@@ -1,0 +1,24 @@
+<% provide :title, t(".lesson_number", id: @lesson.id) %>
+
+<div>
+  <div>
+    <label><%= t ".category" %>:</label>
+    <%= @category_name %>
+  </div>
+  <div>
+    <label><%= t ".datetime" %>:</label>
+    <%= convert_datetime @lesson.created_at %>
+  </div>
+</div>
+
+<h1><%= t ".lesson_number", id: @lesson.id %></h1>
+<%= form_for @lesson do |f| %>
+  <ol>
+    <%= f.fields_for :results do |builder| %>
+      <%= render "question", f: builder %>
+    <% end %>
+  </ol>
+  <div class="col-md-1">
+    <%= f.submit t(".finish"), class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :users
   resources :categories, only: [:index, :show]
   resources :csv, only: [:index, :create]
+  resources :lessons
 
   namespace :admin do
     resources :categories
