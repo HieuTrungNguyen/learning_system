@@ -4,10 +4,13 @@ class Word < ApplicationRecord
   has_many :answers, dependent: :destroy, inverse_of: :word
   has_many :results
 
-  validates :content, presence: true, length: {maximum: 50}
+  validates :content, presence: true, length: {maximum: 50},
+    uniqueness: {case_sensitive: false}
 
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: proc{|attributes| attributes["content"].blank?}
+
+  validate :check_answers
 
   class << self
     def import
@@ -35,6 +38,20 @@ class Word < ApplicationRecord
           csv << attributes.map{|attr| item.send(attr)}
         end
       end
+    end
+  end
+
+  private
+  def check_answers
+    size_correct = self.answers.select{|answer| answer.is_correct}.size
+    if size_correct == 0
+      errors.add I18n.t("validate.answer"), I18n.t("validate.zero")
+    end
+    if size_correct > 1
+      errors.add I18n.t("validate.answer"), I18n.t(".required_1_correct")
+    end
+    if answers.length > answers.group_by { |a| a[:content] }.length
+      self.errors.add :answers, I18n.t("validate.duplication")
     end
   end
 end
