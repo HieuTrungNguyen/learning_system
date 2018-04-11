@@ -3,6 +3,9 @@ en:
   word_imported: "Word imported!"
   must_login: "You aren't log in."
   not_enough_word: "Not enough word to create lesson"
+  answer_not_more_4: "answers not more 4"
+  answer_not_less_2: "answers not less 2"
+  required_1_correct: "just required 1 correct"
 
   admin:
     categories:
@@ -51,6 +54,17 @@ en:
         name: "Name"
         email: "Email"
         action: "Action"
+    words:
+      new:
+        add_word: "Add new word"
+        create_word: "Create new word"
+      create:
+        created: "Create a new word successfully!"
+      word:
+        add_answer: "Add answer"
+      answer_fields:
+        remove: "Remove"
+        correct: "Correct"
 
   categories:
     category:
