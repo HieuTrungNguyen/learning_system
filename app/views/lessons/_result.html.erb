@@ -1,0 +1,23 @@
+<li><%= f.label f.object.word.content %></li>
+<% f.object.word.answers.each_with_index do |answer, index| %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= create_answer_index index %>
+      <%= answer.content %>
+    </div>
+    <div class="col-md-4">
+      <%= f.radio_button :answer_id, answer.id, disabled: true %>
+    </div>
+  </div>
+<% end %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 text-center">
+    <% if is_correct_answer f.object.answer_id %>
+      <span><%=  t ".correct" %></span>
+      <span class="glyphicon glyphicon-ok"></span>
+    <% else %>
+      <span><%= t ".incorrect" %></span>
+      <span class="glyphicon glyphicon-remove"></span>
+    <% end %>
+  </div>
+</div>
