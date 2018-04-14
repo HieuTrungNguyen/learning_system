@@ -100,11 +100,24 @@ en:
   lessons:
     create:
       create_success: "Create lesson successfully!"
+    show:
+      lesson_number: "Lesson: %{id}"
+      category: "Category"
+      date: "Date"
+      mark: "Mark"
+      result: "Result"
+      ok: "Ok"
     edit:
       lesson_number: "Lesson: %{id}"
       category: "Category"
-      datetime: "Datetime"
+      datetime: "Date"
       finish: "Finish"
+    update:
+      finished: "This lesson is finished"
+      not_finished: "Continue this lesson to finish"
+    result:
+      correct: "Correct"
+      incorrect: "Incorrect"
 
   sessions:
     new:

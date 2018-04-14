@@ -16,6 +16,10 @@ module ApplicationHelper
     date.to_formatted_s :long
   end
 
+  def is_correct_answer answer_id
+    answer_id.nil? ? false : Answer.find_by(id: answer_id).is_correct
+  end
+
   def link_to_function name, *args, &block
     html_options = args.extract_options!.symbolize_keys
     function = block_given? ? update_page(&block) : args[0] || ""

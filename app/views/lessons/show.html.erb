@@ -1,0 +1,28 @@
+<% provide :title, t(".lesson_number", id: @lesson.id) %>
+
+<div class="row">
+  <div>
+    <label><%= t ".category" %>:</label>
+    <%= @category_name %>
+  </div>
+  <div>
+    <label><%= t ".date" %>:</label>
+    <%= convert_datetime @lesson.created_at %>
+  </div>
+  <div>
+    <label><%= t ".mark" %>:</label>
+    <%= @lesson.number_correct_answer.to_s + "/" + Settings.lesson.size.to_s %>
+  </div>
+
+  <h3><%= t ".result" %>:</h3>
+  <%= form_for @lesson do |f| %>
+    <ol>
+      <%= f.fields_for :results do |builder| %>
+        <%= render "result", f: builder %>
+      <% end %>
+    </ol>
+    <div class="col-md-2">
+      <%= link_to t(".ok"), categories_path, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
