@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :categories
     resources :users, except: [:edit, :update]
+    resources :words
   end
 end
