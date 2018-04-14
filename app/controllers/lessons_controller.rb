@@ -8,6 +8,8 @@ class LessonsController < ApplicationController
       user_id: current_user.id
     if @lesson.save
       flash[:success] = t ".create_success"
+      @lesson.activities.create user_id: @lesson.user_id,
+        activity_type: Activity.actions[:start_lesson]
       redirect_to edit_lesson_path @lesson
     else
       flash[:danger] = @lesson.errors.full_messages
@@ -27,6 +29,8 @@ class LessonsController < ApplicationController
   def update
     if @lesson.update_attributes lesson_params.merge is_complete: true
       flash[:success] = t ".finished"
+      @lesson.activities.create user_id: @lesson.user_id,
+        activity_type: Activity.actions[:finish_lesson]
       redirect_to @lesson
     else
       flash[:danger] = t ".not_finished"
