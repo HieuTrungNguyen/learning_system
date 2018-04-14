@@ -3,6 +3,7 @@ class Lesson < ApplicationRecord
   belongs_to :user
 
   has_many :results, dependent: :destroy, inverse_of: :lesson
+  has_many :activities, as: :activityable
   delegate :name, to: :category, prefix: true
   before_create :words_for_lesson
 
