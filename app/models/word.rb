@@ -7,12 +7,20 @@ class Word < ApplicationRecord
   validates :content, presence: true, length: {maximum: 50},
     uniqueness: {case_sensitive: false}
 
+  scope :search_word, -> search {where QUERY_BY_CONTENT, search: "%#{search}%"}
+  QUERY_BY_CONTENT = "content like :search"
+
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: proc{|attributes| attributes["content"].blank?}
 
   validate :check_answers
 
   class << self
+
+    def list_words
+      Word.order(created_at: :ASC).includes(:category)
+    end
+
     def import
       CSV.foreach(file.path, headers: true, col_sep: "|", header_converters: :symbol) do |row|
         row = row.to_hash

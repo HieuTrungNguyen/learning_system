@@ -60,7 +60,19 @@ en:
         create_word: "Create new word"
       create:
         created: "Create a new word successfully!"
+      index:
+        all_words: "All Words"
+        search: "Search"
+        number: "Number"
+        category: "Category"
+        content: "Content"
+        action: "Action"
       word:
+        info: "Info"
+        edit: "Edit"
+        delete: "Delete"
+        sure?: "You sure?"
+      form:
         add_answer: "Add answer"
       answer_fields:
         remove: "Remove"
@@ -96,6 +108,7 @@ en:
       settings: "Settings"
       log_out: "Log out"
       categories: "Categories"
+      words: "Words"
 
   lessons:
     create:
