@@ -34,10 +34,11 @@ en:
       destroy:
         deleted: "%{name}'s category deleted"
         not_deleted: "%{name}'s category isn't deleted"
+        notice_mess: "You must delete all words before delete category!"
       category:
         edit: "Edit"
         dele: "Delete"
-        sure?: "You sure?"
+        sure?: "You sure when delete this category?"
         edit_category: "Edit Category"
         name: "Name"
         description: "Description"
