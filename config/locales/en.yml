@@ -47,6 +47,7 @@ en:
     users:
       user:
         delete: "Delete"
+        sure?: "You sure when delete this user?"
       index:
         all_users: "All Users"
         search: "Search"
@@ -55,6 +56,9 @@ en:
         name: "Name"
         email: "Email"
         action: "Action"
+      destroy:
+        deleted: "%{name}'s user has been deleted"
+        not_deleted: "%{name}'s user hasn't been deleted"
     words:
       new:
         add_word: "Add new word"
