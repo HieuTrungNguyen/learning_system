@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 20180406010618) do
 
   create_table "activities", force: :cascade do |t|
+    t.integer "activity_type"
     t.string "activityable_type"
     t.integer "activityable_id"
     t.integer "user_id"
