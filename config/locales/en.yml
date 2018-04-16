@@ -171,3 +171,11 @@ en:
       avatar: "Avatar"
       name: "Name"
       email: "Email"
+
+  words:
+    index:
+      all_words: "All Words"
+      search: "Search"
+      number: "Number"
+      category: "Category"
+      content: "Content"
