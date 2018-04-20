@@ -8,6 +8,6 @@ lesson:
 word:
   per_page: 10
   filter:
-    learnt: "learnt"
-    not_learnt: "not learnt"
-    all_words: "all words"
+    - learnt
+    - not_learnt
+    - all_words

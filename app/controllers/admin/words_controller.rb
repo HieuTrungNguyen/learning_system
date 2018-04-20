@@ -18,7 +18,7 @@ class Admin::WordsController < ApplicationController
 
   def index
     params[:search] ||= ""
-    @words = Word.list_words.search_word(params[:search])
+    @words = Word.list_words.all_words(current_user.id, params[:search])
       .paginate page: params[:page], per_page: Settings.word.per_page
   end
 
