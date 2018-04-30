@@ -1,3 +1,18 @@
 <% provide :title, @user.name %>
 
-<h1><%= @user.name %></h1>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="stats">
+        <%= render "shared/stats" %>
+      </section>
+      <section class="button">
+        <%= render "follow_form" if logged_in? %>
+      </section>
+    </aside>
+    <div class="col-md-8"></div>
+  </div>
+<% end %>

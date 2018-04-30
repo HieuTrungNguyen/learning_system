@@ -95,6 +95,24 @@ en:
       words_total: "Words Total"
       action: "Action"
 
+  followers:
+    show:
+      followers: "Followers"
+      follower: "follower"
+      number: "Number"
+      avatar: "Avatar"
+      name: "Name"
+      email: "Email"
+
+  followings:
+    show:
+      followings: "Following"
+      following: "following"
+      number: "Number"
+      avatar: "Avatar"
+      name: "Name"
+      email: "Email"
+
   layouts:
     application:
       title: "E-learning System"
@@ -150,6 +168,11 @@ en:
     error_messages:
       form_contains: "The form contains"
       error: "error"
+    stats:
+      following: "following"
+      followers: "followers"
+    user_info:
+      view_profile: "view my profile"
 
   static_pages:
     home:
@@ -157,6 +180,10 @@ en:
       signup_now: "Sign up now!"
 
   users:
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
     new:
       sign_up: "Sign up"
       create_account: "Create new account"
