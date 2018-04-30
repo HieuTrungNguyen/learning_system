@@ -30,9 +30,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end
-
-  def load_user
-    @user = User.find_by id: params[:id]
-    render_404 unless @user
-  end
 end

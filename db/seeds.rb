@@ -121,9 +121,9 @@ end
   end
 end
 
-# users = User.all
-# user  = users.second
-# following = users[3..20]
-# followers = users[4..20]
-# following.each {|followed| user.follow(followed)}
-# followers.each {|follower| follower.follow(user)}
+users = User.all
+user  = users.first
+following = users[3..20]
+followers = users[4..20]
+following.each {|followed| user.follow(followed)}
+followers.each {|follower| follower.follow(user)}

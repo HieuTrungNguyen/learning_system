@@ -11,3 +11,7 @@ word:
     - learnt
     - not_learnt
     - all_words
+follower:
+  per_page: 10
+following:
+  per_page: 10
