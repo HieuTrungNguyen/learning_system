@@ -4,7 +4,9 @@ class Lesson < ApplicationRecord
 
   has_many :results, dependent: :destroy, inverse_of: :lesson
   has_many :activities, as: :activityable
+
   delegate :name, to: :category, prefix: true
+
   before_create :words_for_lesson
 
   validate :verify_create_lesson
