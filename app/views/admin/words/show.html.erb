@@ -1,0 +1,40 @@
+<% provide :title, t(".word_detail", name: @word.content) %>
+
+<h1><%= t ".word_detail", name: @word.content %></h1>
+<div class="row">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th><%= t ".content" %></th>
+          <th><%= t ".category" %></th>
+          <th><%= t ".answers" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @word.content %></td>
+          <td><%= @word.category_name %></td>
+          <td>
+            <% if @answers.any? %>
+              <ul class="list_answers">
+                <% @answers.each do |answer| %>
+                  <li class="each_answer">
+                    <%= answer.content %>
+                    <% if answer.is_correct %>
+                      <span class="glyphicon glyphicon-ok"></span>
+                    <% else %>
+                      <span class="glyphicon glyphicon-remove"></span>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
+            <% else %>
+              <p><%= t ".no_answer", name: @word.content %>.</p>
+            <% end %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

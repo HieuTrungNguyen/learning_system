@@ -72,6 +72,12 @@ en:
         category: "Category"
         content: "Content"
         action: "Action"
+      show:
+        word_detail: "%{name}'s Detail"
+        content: "Content"
+        category: "Category"
+        answers: "Answers"
+        no_answer: "Sorry, no answers for %{name}'s word. We'll update late"
       word:
         info: "Info"
         edit: "Edit"

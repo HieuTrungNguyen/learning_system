@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -219,4 +219,12 @@ tr.user-row td {
 
 .button {
   margin-top: 30px;
+}
+
+.list_answers {
+  list-style-type: none;
+}
+
+.each_answer {
+  margin-top: 10px;
 }

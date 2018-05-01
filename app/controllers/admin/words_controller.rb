@@ -22,6 +22,11 @@ class Admin::WordsController < ApplicationController
       .paginate page: params[:page], per_page: Settings.word.per_page
   end
 
+  def show
+    @word = Word.find_by id: params[:id]
+    @answers = @word.answers
+  end
+
   private
   def word_params
     params.require(:word).permit :category_id, :content,
