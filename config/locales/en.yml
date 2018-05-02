@@ -6,6 +6,7 @@ en:
   answer_not_more_4: "answers not more 4"
   answer_not_less_2: "answers not less 2"
   required_1_correct: "just required 1 correct"
+  less_5MB: "should be less than 5MB!"
 
   admin:
     categories:
@@ -204,6 +205,12 @@ en:
       avatar: "Avatar"
       name: "Name"
       email: "Email"
+    edit:
+      change: "Change Profile"
+      save: "Save change"
+    update:
+      update_success: "Your profile is updated!"
+      not_update: "No update for your profile!"
 
   words:
     index:

@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
+  mount_uploader :avatar, AvatarUploader
+
   validates :name, presence: true, length: {maximum: 50}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: {maximum: 255},
@@ -19,6 +21,7 @@ class User < ApplicationRecord
 
   has_secure_password
   validates :password, presence: true, length: {minimum: 6, maximum: 255}, allow_nil: true
+  validate :avatar_size
 
   scope :search_user, -> search {where QUERY_BY_NAME_OR_EMAIL, search: "%#{search}%"}
 
@@ -69,5 +72,11 @@ class User < ApplicationRecord
   private
   def downcase_email
     email.downcase!
+  end
+
+  def avatar_size
+    if avatar.size > 5.megabytes
+      errors.add(:avatar, t("less_5MB"))
+    end
   end
 end
