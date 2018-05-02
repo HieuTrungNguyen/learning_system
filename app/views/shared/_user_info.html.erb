@@ -1,5 +1,6 @@
 <h3>
-  <%= link_to gravatar_for(current_user, size: 50), current_user %>
+  <%= image_tag current_user.avatar? ? current_user.avatar.url :
+    Settings.image, class: "img-responsive" %>
   <%= current_user.name %>
 </h3>
 <span><%= link_to t(".view_profile"), current_user %></span>
