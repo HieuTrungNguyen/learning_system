@@ -15,3 +15,6 @@ follower:
   per_page: 10
 following:
   per_page: 10
+activity:
+  per_page: 10
+  size: 10

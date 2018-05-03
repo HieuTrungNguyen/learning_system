@@ -8,6 +8,14 @@ en:
   required_1_correct: "just required 1 correct"
   less_5MB: "should be less than 5MB!"
 
+  activities:
+    index:
+      activities: "Activities"
+    activity:
+      start: "Start"
+      finish: "Finish"
+      ago: "Ago"
+
   admin:
     categories:
       new:
@@ -215,6 +223,9 @@ en:
       avatar: "Avatar"
       name: "Name"
       email: "Email"
+    show:
+      activities: "Activities"
+      more: "More activities"
     edit:
       change: "Change Profile"
       save: "Save change"

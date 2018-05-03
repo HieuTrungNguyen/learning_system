@@ -9,9 +9,7 @@
       <section class="stats">
         <%= render "shared/stats" %>
       </section>
-      <section class="button">
-        <%= render "follow_form" %>
-      </section>
+      <%= render "users/follow_form" %>
     </aside>
     <aside class="col-md-5">
       <section>
@@ -21,7 +19,6 @@
             <%= render @activities %>
           </ul>
           <%= will_paginate @activities %>
-          <%= link_to t(".more"), activities_path(@user) %>
         <% end %>
       </section>
     </aside>
