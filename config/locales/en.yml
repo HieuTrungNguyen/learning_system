@@ -53,6 +53,7 @@ en:
         description: "Description"
         update: "Update"
         cancel: "Cancel"
+        detail: "Detail"
     users:
       user:
         delete: "Delete"

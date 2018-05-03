@@ -5,6 +5,8 @@
   <td class="col-md-4"><%= category.description %></td>
   <td class="col-md-2"><%= category.words.size %></td>
   <td class="col-md-3">
+    <%= link_to t(".detail"), admin_words_path(category_id: category.id),
+      class: "btn btn-info fa fa-pencil" %>
     <button type="button" class="btn btn-success btn-edit-category"
      id="<%= category.id %>"><%= t ".edit" %></button>
     <%= link_to t(".delete"), [:admin, category], method: :delete,

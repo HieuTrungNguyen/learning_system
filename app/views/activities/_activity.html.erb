@@ -8,10 +8,10 @@
         <% when Activity.actions[:unfollow] %>]
           Unfollow <%= link_to obj.name, user_path(activity.activityable_id) %>
         <% when Activity.actions[:start_lesson] %>
-          <%= t(".start"), id: activity.activityable_id, category: obj.category.name %>
+          <%= link_to t(".start"), id: activity.activityable_id, category: obj.category.name %>
         <% when Activity.actions[:finish_lesson] %>
-          <%= t(".finish"), id: activity.activityable_id,
-            result: obj.number_corrrect_answer.to_s + "/" + Settings.lessons.size.to_s %>
+          <%= link_to t(".finish"), id: activity.activityable_id,
+            result: obj.number_correct_answer.to_s + "/" + Settings.lesson.size.to_s %>
       <% end %>
     </span>
     <span>

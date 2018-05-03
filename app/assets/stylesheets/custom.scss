@@ -233,3 +233,7 @@ tr.user-row td {
 .each_answer {
   margin-top: 10px;
 }
+
+tr.each-word td:last-child {
+  transform: unset;
+}
