@@ -18,6 +18,7 @@ function remove_fields(link) {
   var answers = document.getElementsByClassName('answer_field');
   if(answers.length > 2){
     $(link).prev('input[type=hidden]').value = '1';
+    answer.parent().next('input[type=hidden]').remove();
     $(link).closest('.form-group').remove();
   }
   else{

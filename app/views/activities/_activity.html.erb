@@ -1,0 +1,22 @@
+<% if obj = activity.target_object %>
+  <li>
+    <span>
+      <%= activity.user.name %>
+      <% case activity.activity_type %>
+        <% when Activity.actions[:follow] %>
+          Follow <%= link_to obj.name, user_path(activity.activityable_id) %>
+        <% when Activity.actions[:unfollow] %>]
+          Unfollow <%= link_to obj.name, user_path(activity.activityable_id) %>
+        <% when Activity.actions[:start_lesson] %>
+          <%= t(".start"), id: activity.activityable_id, category: obj.category.name %>
+        <% when Activity.actions[:finish_lesson] %>
+          <%= t(".finish"), id: activity.activityable_id,
+            result: obj.number_corrrect_answer.to_s + "/" + Settings.lessons.size.to_s %>
+      <% end %>
+    </span>
+    <span>
+      <%= time_ago_in_words activity.created_at %>
+        <%= t ".ago" %> (<%= convert_datetime activity.created_at %>)
+    </span>
+  </li>
+<% end %>

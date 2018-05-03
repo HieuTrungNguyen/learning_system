@@ -38,6 +38,7 @@ class UsersController < ApplicationController
 
   def show
     render_404 unless @user
+    @activities = Activity.user_activity(@user.id).limit(Settings.activity.size)
   end
 
   private

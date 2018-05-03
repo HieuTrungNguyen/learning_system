@@ -1,6 +1,6 @@
 <h3>
-  <%= image_tag current_user.avatar? ? current_user.avatar.url :
+  <%= image_tag @user.avatar? ? @user.avatar.url :
     Settings.image, class: "img-responsive" %>
-  <%= current_user.name %>
+  <%= @user.name %>
 </h3>
-<span><%= link_to t(".view_profile"), current_user %></span>
+<span><%= link_to t(".view_profile"), @user %></span>
