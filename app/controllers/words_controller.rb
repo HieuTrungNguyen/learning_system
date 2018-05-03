@@ -4,7 +4,7 @@ class WordsController < ApplicationController
 
   def index
     params[:search] ||= ""
-    params[:status] ||= Settings.word.filter.all_words
+    params[:status] ||= Settings.word.filter.first
     @words = Word.in_category(params[:category_id])
       .send(params[:status], current_user.id, params[:search])
       .paginate page: params[:page], per_page: Settings.word.per_page

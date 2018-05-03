@@ -1,6 +1,11 @@
 <% provide :title, t(".word_detail", name: @word.content) %>
 
 <h1><%= t ".word_detail", name: @word.content %></h1>
+<div class="edit_word">
+  <%= link_to edit_admin_word_path(@word) do  %>
+    <span class="btn btn-primary fa fa pencil pull-right"><%= t ".edit" %></span>
+  <% end %>
+</div>
 <div class="row">
   <div class="table-responsive">
     <table class="table table-bordered table-hover">

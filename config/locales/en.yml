@@ -79,6 +79,16 @@ en:
         category: "Category"
         answers: "Answers"
         no_answer: "Sorry, no answers for %{name}'s word. We'll update late"
+        edit: "Edit"
+      edit:
+        edit: "Edit Word"
+        save: "Save change"
+      update:
+        update_success: "%{name}'s word is updated!"
+        update_fail: "No updated for %{name}'s word!"
+      destroy:
+        delete: "You're deleting %{name}'s word."
+        delete_fail: "Deleting %{name}'s word is failed!"
       word:
         info: "Info"
         edit: "Edit"
