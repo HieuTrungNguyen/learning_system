@@ -20,7 +20,6 @@
           <ul>
             <%= render @activities %>
           </ul>
-          <%= will_paginate @activities %>
           <%= link_to t(".more"), activities_path(@user) %>
         <% end %>
       </section>
