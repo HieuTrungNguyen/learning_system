@@ -50,7 +50,7 @@ class Word < ApplicationRecord
         end
         row[:answers_attributes] = answers_attributes
         row.delete :answers
-        Word.create! row
+        Word.create row
       end
     end
 

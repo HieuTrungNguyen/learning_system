@@ -23,10 +23,29 @@
     <% end %>
   </div>
 </div>
-<div class="new_word">
-  <%= link_to new_admin_word_path do %>
-    <span class="btn btn-primary glyphicon glyphicon-plus pull-right"></span>
-  <% end %>
+<div class="row">
+  <div class="col-md-2">
+    <div class="new_word">
+      <%= link_to new_admin_word_path do %>
+        <span class="btn btn-primary glyphicon glyphicon-plus"></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="btn btn-info import">
+      <i class="fa fa-upload"></i> <%= t ".import" %>
+    </div>
+  </div>
+  <div class="col-sm-4" id="import" style="display: none">
+    <%= form_tag admin_csv_index_path, multipart: true do %>
+      <div class="import_file">
+        <%= file_field_tag :file %>
+      </div>
+      <div class="import_file">
+        <%= submit_tag t(".submit") %>
+      </div>
+    <% end %>
+  </div>
 </div>
 <div class="panel-body">
   <div class="row">

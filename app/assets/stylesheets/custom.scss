@@ -234,6 +234,28 @@ tr.user-row td {
   margin-top: 10px;
 }
 
+li.each_activity {
+  margin-bottom: 10px;
+}
+
+aside.activity {
+  padding: 0 3em 0 3em;
+}
+
+aside.result {
+  h2.show_result {
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+}
+
+h2
+
 tr.each-word td:last-child {
   transform: unset;
+}
+
+.import_file {
+  display: inline-block;
+  margin-right: 10px;
 }
