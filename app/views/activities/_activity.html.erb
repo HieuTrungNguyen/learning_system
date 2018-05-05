@@ -1,5 +1,5 @@
 <% if obj = activity.target_object %>
-  <li>
+  <li class="each_activity">
     <span>
       <%= activity.user.name %>
       <% case activity.activity_type %>
@@ -8,10 +8,10 @@
         <% when Activity.actions[:unfollow] %>]
           Unfollow <%= link_to obj.name, user_path(activity.activityable_id) %>
         <% when Activity.actions[:start_lesson] %>
-          <%= link_to t(".start"), id: activity.activityable_id, category: obj.category.name %>
+          <%= t(".start", id: activity.activityable_id, category: obj.category.name) %>
         <% when Activity.actions[:finish_lesson] %>
-          <%= link_to t(".finish"), id: activity.activityable_id,
-            result: obj.number_correct_answer.to_s + "/" + Settings.lesson.size.to_s %>
+          <%= t(".finish", id: activity.activityable_id,
+            result: obj.number_correct_answer.to_s + "/" + Settings.lesson.size.to_s) %>
       <% end %>
     </span>
     <span>

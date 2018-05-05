@@ -17,7 +17,6 @@ Rails.application.routes.draw do
     end
   end
   resources :categories, only: [:index, :show]
-  resources :csv, only: [:index, :create]
   resources :lessons
   resources :words, only: [:index, :show]
   resources :followers
@@ -29,5 +28,6 @@ Rails.application.routes.draw do
     resources :categories
     resources :users, except: [:edit, :update]
     resources :words
+    resources :csv, only: [:index, :create]
   end
 end

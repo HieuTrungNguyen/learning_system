@@ -12,8 +12,8 @@ en:
     index:
       activities: "Activities"
     activity:
-      start: "Start"
-      finish: "Finish"
+      start: "start lesson %{id} in %{category}'s category, "
+      finish: "finish lesson %{id} with result: %{result} mark, "
       ago: "Ago"
 
   admin:
@@ -82,6 +82,7 @@ en:
         category: "Category"
         content: "Content"
         action: "Action"
+        import: "Import"
       show:
         word_detail: "%{name}'s Detail"
         content: "Content"
@@ -177,6 +178,13 @@ en:
     update:
       finished: "This lesson is finished"
       not_finished: "Continue this lesson to finish"
+    lesson:
+      lesson: "Lesson"
+      category: "Category"
+      action: "Action"
+      mark: "Mark"
+      complete: "Complete"
+      continue: "Continue"
     result:
       correct: "Correct"
       incorrect: "Incorrect"
@@ -227,6 +235,7 @@ en:
     show:
       activities: "Activities"
       more: "More activities"
+      show_result: "Show Results"
     edit:
       change: "Change Profile"
       save: "Save change"
